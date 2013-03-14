@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
- <!-- <remove-project name="CyanogenMod/android_frameworks_base" /> -->
- <project name="TeamApexQ/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" />
- <project name="TeamApexQ/vendor_samsung_apexqtmo" path="vendor/samsung/apexqtmo" remote="github" />
- <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexq" remote="github" />
- <!-- <project name="lbdroid/android_frameworks_base" path="frameworks/base" remote="github" /> -->
+ <project name="infernix/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" />
+ <project name="infernix/vendor_samsung_apexqtmo" path="vendor/samsung/apexqtmo" remote="github" />
+ <project name="infernix/android_kernel_samsung_apexq" path="kernel/samsung/apexq" remote="github" />
  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
  <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" />
 </manifest>
