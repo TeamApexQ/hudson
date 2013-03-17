@@ -5,8 +5,8 @@
  <project name="infernix/android_kernel_samsung_apexq" path="kernel/samsung/apexq" remote="github" />
  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
  <project name="TeamApexQ/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" />
- <!-- <remove-project name="CyanogenMod/android_hardware_qcom_audio" /> -->
- <!-- <project name="infernix/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" /> -->
+ <remove-project name="CyanogenMod/android_hardware_qcom_audio" /> -->
+ <project name="infernix/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" /> -->
  <remove-project name="CyanogenMod/android_hardware_qcom_audio-caf" />
  <project name="infernix/android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf" remote="github" />
  <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid" />
