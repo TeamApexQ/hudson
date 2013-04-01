@@ -11,4 +11,6 @@
   <project name="infernix/android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf" remote="github" />
  <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid" />
  <project name="infernix/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="github" />
+ <remove-project name="CyanogenMod/android_hardware_qcom_display-caf" /> 
+  <project name="infernix/android_hardware_qcom_display-caf" path="hardware/qcom/display-caf" remote="github" />
 </manifest>
