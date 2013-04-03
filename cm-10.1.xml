@@ -13,4 +13,6 @@
  <project name="infernix/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="github" />
  <remove-project name="CyanogenMod/android_hardware_qcom_display-caf" /> 
   <project name="infernix/android_hardware_qcom_display-caf" path="hardware/qcom/display-caf" remote="github" />
+ <remove-project name="CyanogenMod/android_packages_apps_Bluetooth" />
+  <project name="infernix/android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="github" />
 </manifest>
