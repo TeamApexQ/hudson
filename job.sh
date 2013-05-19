@@ -11,6 +11,7 @@ export WORKSPACE=$PWD
 
 ## if [ ! -d hudson ]
 ## then
+  rm -rf hudson
   git clone git://github.com/TeamApexQ/hudson.git -b cm-10.1-nardholio-3.4
 ## fi
 
