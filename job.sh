@@ -9,11 +9,10 @@ mkdir -p ../android
 cd ../android
 export WORKSPACE=$PWD
 
-## if [ ! -d hudson ]
-## then
-  rm -rf hudson
+if [ ! -d hudson ]
+then
   git clone git://github.com/TeamApexQ/hudson.git -b cm-10.1-nardholio-3.4
-## fi
+fi
 
 cd hudson
 ## Get rid of possible local changes
