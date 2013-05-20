@@ -2,7 +2,7 @@
 <manifest>
  <!-- Main repos from TeamApexQ on cm-10.1-nardholio-3.4 branches -->
  <project name="TeamApexQ/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" revision="cm-10.1-nardholio-3.4" />
- <project name="TeamApexQ/vendor_samsung_apexqtmo" path="vendor/samsung/apexqtmo" remote="github" revision="cm-10.1"/>
+ <project name="TeamApexQ/vendor_samsung_apexqtmo" path="vendor/samsung/apexqtmo" remote="github" revision="cm-10.1" />
  <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexq" remote="github" revision="cm-10.1-nardholio-3.4" />
 
  <!-- Upstream CM 10.1 repos -->
