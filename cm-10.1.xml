@@ -6,15 +6,14 @@
  <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexq" remote="github" revision="cm-10.1-infernix-3.0" />
 
  <!-- Upstream CM 10.1 repos -->
+ <project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" />
  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
 
  <!-- Forks of CM 10.1 repos due to upstream breaking our builds -->
  <project name="TeamApexQ/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" revision="cm-10.1" />
 
- <remove-project name="CyanogenMod/android_hardware_qcom_media" />
- <project name="TeamApexQ/android_hardware_qcom_media" path="hardware/qcom/media" remote="github" revision="cm-10.1" />
-
  <!-- Debug enabled forks of CM 10.1 repos -->
+ <!-- ALL OFF
  <remove-project name="CyanogenMod/android_hardware_qcom_audio" /> 
  <project name="infernix/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" revision="cm-10.1" /> 
 
@@ -26,5 +25,5 @@
 
  <remove-project name="CyanogenMod/android_packages_apps_Bluetooth" />
  <project name="infernix/android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="github" revision="cm-10.1" />
-
+ -->
 </manifest>
