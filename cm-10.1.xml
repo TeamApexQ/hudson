@@ -2,12 +2,12 @@
 <manifest>
  <project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" />
  <!-- Main repos from TeamApexQ on cm-10.1-nardholio-3.4 branches -->
- <project name="TeamApexQ/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" revision="cm-10.1-nardholio-3.4" />
- <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
- <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexqtmo" remote="github" revision="cm-10.1-nardholio-3.4" />
+ <project name="nardholio/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" revision="cm-10.1" />
+ <project name="nardholio/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
+ <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexqtmo" remote="github" revision="cm-10.1" />
 
  <!-- Upstream CM 10.1 repos -->
  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
  <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" />
- <project name="CyanogenMod/android_device_samsung_d2-common" path="device/samsung/d2-common" remote="github" />
+ <project name="nardholio/android_device_samsung_d2-common" path="device/samsung/d2-common" remote="github" />
 </manifest>
