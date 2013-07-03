@@ -2,7 +2,7 @@
 <manifest>
  <project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" />
  <project name="noobnl/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" />
- <project name="lbdroid/vendor_samsung_apexqtmo" path="vendor/samsung/apexqtmo" remote="github" revision="cm-10.1-nardholio-3.4" />
+ <project name="TeamApexQ/vendor_samsung_apexqtmo" path="vendor/samsung/apexqtmo" remote="github" revision="cm-10.1" />
  <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexqtmo" remote="github" revision="cm-10.1-nard" />
  <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" />
  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
