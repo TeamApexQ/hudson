@@ -6,5 +6,5 @@
  <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexqtmo" remote="github" revision="cm-10.1-nard" />
  <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" />
  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
- <project name="CyanogenMod/android_device_samsung_d2-common" path="device/samsung/d2-common" remote="github" />
+ <project name="nardholio/android_device_samsung_d2-common" path="device/samsung/d2-common" remote="github" />
 </manifest>
