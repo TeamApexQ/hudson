@@ -3,14 +3,12 @@
  <!-- Main repos from TeamApexQ on cm-10.1-infernix-3.0 branches -->
  <project name="TeamApexQ/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" revision="cm-10.1-infernix-3.0" />
  <project name="TeamApexQ/vendor_samsung_apexqtmo" path="vendor/samsung/apexqtmo" remote="github" revision="cm-10.1-infernix-3.0" />
- <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexq" remote="github" revision="cm-10.1-infernix-3.0" />
+ <project name="TeamApexQ/android_kernel_samsung_apexq" path="kernel/samsung/apexq" remote="github" revision="cm-10.1-prima-3.2.3.114" />
 
  <!-- Upstream CM 10.1 repos -->
  <project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" />
  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
-
- <!-- Forks of CM 10.1 repos due to upstream breaking our builds -->
- <project name="TeamApexQ/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" revision="cm-10.1" />
+ <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" />
 
  <!-- Debug enabled forks of CM 10.1 repos -->
  <!-- ALL OFF
