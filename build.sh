@@ -281,7 +281,8 @@ check_result "Build failed."
 
 for f in $(ls $OUT/cm-*.zip*)
 do
-  ln $f $WORKSPACE/archive/$(basename $f)
+  targetf=`basename $f | sed "s/.zip$/-${BUILD_NO}.zip/g"`
+  ln $f $WORKSPACE/archive/$targetf
 done
 if [ -f $OUT/utilties/update.zip ]
 then
