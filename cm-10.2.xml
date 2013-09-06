@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
  <project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" />
- <project name="CyanogenMod/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" revision="cm-10.2" />
+ <project name="lbdroid/android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" remote="github" revision="cm-10.2" />
  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="cm-10.2" />
- <project name="CyanogenMod/android_kernel_samsung_d2" path="kernel/samsung/d2" remote="github" revision="cm-10.2_cafmerge" />
- <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" />
- <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" />
- <project name="CyanogenMod/android_device_samsung_d2-common" path="device/samsung/d2-common" remote="github" />
+ <project name="lbdroid/android_kernel_samsung_d2" path="kernel/samsung/d2" remote="github" revision="cm-10.2" />
+ <project name="lbdroid/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" revision="cm-10.2" />
+ <project name="lbdroid/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" revision="cm-10.2" />
+ <project name="lbdroid/android_device_samsung_d2-common" path="device/samsung/d2-common" remote="github" revision="cm-10.2" />
 </manifest>
-
