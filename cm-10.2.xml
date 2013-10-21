@@ -6,6 +6,6 @@
  <project name="lbdroid/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="github" revision="cm-10.2" />
  <project name="lbdroid/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" revision="cm-10.2" />
  <project name="lbdroid/android_device_samsung_d2-common" path="device/samsung/d2-common" remote="github" revision="cm-10.2" />
- <remove-project name="CyanogenMod/android_packages_apps_CMAccount" />
- <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
+ <!--remove-project name="CyanogenMod/android_packages_apps_CMAccount" />
+ <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" /-->
 </manifest>
