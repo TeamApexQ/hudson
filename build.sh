@@ -186,6 +186,8 @@ then
 fi
 
 . build/envsetup.sh
+echo "UPDATING API"
+make update-api
 lunch $LUNCH
 check_result "lunch failed."
 
