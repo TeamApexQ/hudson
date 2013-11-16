@@ -187,7 +187,6 @@ fi
 
 . build/envsetup.sh
 echo "UPDATING API"
-make update-api
 lunch $LUNCH
 check_result "lunch failed."
 
@@ -277,7 +276,7 @@ else
 fi
 
 echo "$REPO_BRANCH-$CORE_BRANCH$RELEASE_MANIFEST" > .last_branch
-
+make update-api
 time mka bacon recoveryzip recoveryimage checkapi
 check_result "Build failed."
 
