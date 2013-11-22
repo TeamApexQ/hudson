@@ -114,7 +114,8 @@ repo init -u $SYNC_PROTO://github.com/CyanogenMod/android.git -b $CORE_BRANCH $M
 check_result "repo init failed."
 
 # make sure ccache is in PATH
-if [[ "$REPO_BRANCH" =~ "kitkat" || $REPO_BRANCH =~ "cm-11" ]]
+echo "Repo branch: $REPO_BRANCH"
+if [[ "$REPO_BRANCH" =~ "kitkat" || $REPO_BRANCH =~ "cm-11" || $REPO_BRANCH =~ "cm-11.0" ]]
  then
  export PATH="$PATH:/opt/local/bin/:$PWD/prebuilts/misc/$(uname|awk '{print tolower($0)}')-x86/ccache"
  export CCACHE_DIR=~/.kk_ccache
