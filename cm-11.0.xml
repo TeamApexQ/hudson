@@ -10,5 +10,5 @@
  <project name="lbdroid/android_external_noanalytics" path="external/noanalytics" remote="github" revision="cm-11.0-precompiled" />
  <remove-project name="CyanogenMod/android_packages_apps_CMAccount" /-->
  <remove-project name="CyanogenMod/android_packages_apps_Settings" />
- <project name="lbdroid/android_packages_apps_Settings" path="packages/apps/settings" remote="github" revision="cm-11.0" />
+ <project name="lbdroid/android_packages_apps_Settings" path="packages/apps/Settings" remote="github" revision="cm-11.0" />
 </manifest>
