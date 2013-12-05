@@ -1,0 +1,37 @@
+#!/bin/bash
+OUT=out/target/product/apexqtmo
+rm -f $OUT/cm*.zip*
+cd vendor/cm
+./get-prebuilts
+cd ../..
+export PATH="$PATH:/opt/local/bin/:$PWD/prebuilts/misc/$(uname|awk '{print tolower($0)}')-x86/ccache"
+export CCACHE_DIR=~/.kk_ccache
+if [ ! "$(ccache -s|grep -E 'max cache size'|awk '{print $4}')" = "15.0" ]
+then
+ccache -M 15G
+fi
+. ./build/envsetup.sh
+if [ $CLEAN = "true" ]; then make clean; fi
+brunch apexqtmo
+if [ "0" -ne "$?" ]; then exit 1; fi
+
+
+
+if [! -d $WORKSPACE/archive ]; then mkdir $WORKSPACE/archive; fi
+for f in $(ls $OUT/cm-*.zip*)
+do
+targetf=`basename $f | sed "s/.zip$/-${BUILD_NO}.zip/g"`
+  ln $f $WORKSPACE/archive/$targetf
+done
+if [ -f $OUT/boot.img ]
+then
+cp $OUT/boot.img $WORKSPACE/archive
+fi
+if [ -f $OUT/recovery.img ]
+then
+cp $OUT/recovery.img $WORKSPACE/archive
+fi
+
+# chmod the files in case UMASK blocks permissions
+chmod -R ugo+r $WORKSPACE/archive
+
