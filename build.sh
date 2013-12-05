@@ -110,6 +110,7 @@ fi
 
 rm -rf .repo/manifests*
 rm -f .repo/local_manifests/dyn-*.xml
+echo "BRANCH/MANIFEST: $CORE_BRANCH $MANIFEST"
 repo init -u $SYNC_PROTO://github.com/CyanogenMod/android.git -b $CORE_BRANCH $MANIFEST
 check_result "repo init failed."
 
