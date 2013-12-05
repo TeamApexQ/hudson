@@ -7,6 +7,7 @@ cd vendor/cm
 ./get-prebuilts
 cd ../..
 export PATH="$PATH:/opt/local/bin/:$PWD/prebuilts/misc/$(uname|awk '{print tolower($0)}')-x86/ccache"
+export USE_CCACHE=1
 export CCACHE_DIR=~/.kk_ccache
 if [ ! "$(ccache -s|grep -E 'max cache size'|awk '{print $4}')" = "15.0" ]
 then
