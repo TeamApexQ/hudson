@@ -1,4 +1,6 @@
 #!/bin/bash
+
+rm -f $WORKSPACE/*.zip $WORKSPACE/*.img
 OUT=out/target/product/apexqtmo
 rm -f $OUT/cm*.zip*
 cd vendor/cm
@@ -15,8 +17,6 @@ if [ $CLEAN = "true" ]; then make clean; fi
 brunch apexqtmo
 if [ "0" -ne "$?" ]; then exit 1; fi
 
-
-
 if [! -d $WORKSPACE/archive ]; then mkdir $WORKSPACE/archive; fi
 for f in $(ls $OUT/cm-*.zip*)
 do
@@ -32,6 +32,4 @@ then
 cp $OUT/recovery.img $WORKSPACE/archive
 fi
 
-# chmod the files in case UMASK blocks permissions
 chmod -R ugo+r $WORKSPACE/archive
-
