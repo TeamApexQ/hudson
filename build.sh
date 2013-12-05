@@ -63,7 +63,7 @@ export CL_RST="\"\033[0m\""
 
 cd $WORKSPACE
 rm -rf archive
-mkdir -p archive
+#mkdir -p archive
 export BUILD_NO=$BUILD_NUMBER
 unset BUILD_NUMBER
 
@@ -111,7 +111,8 @@ fi
 rm -rf .repo/manifests*
 rm -f .repo/local_manifests/dyn-*.xml
 echo "BRANCH/MANIFEST: $CORE_BRANCH $MANIFEST"
-repo init -u $SYNC_PROTO://github.com/CyanogenMod/android.git -b $CORE_BRANCH $MANIFEST
+repo init -u $SYNC_PROTO://github.com/CyanogenMod/android.git -b $CORE_BRANCH
+#$MANIFEST
 check_result "repo init failed."
 
 # make sure ccache is in PATH
@@ -136,16 +137,17 @@ then
   . ~/.jenkins_profile
 fi
 
+rm -rf .repo/local_manifests
 mkdir -p .repo/local_manifests
 rm -f .repo/local_manifest.xml
 
-cp $WORKSPACE/hudson/$REPO_BRANCH.xml .repo/local_manifests/dyn-$REPO_BRANCH.xml
+cp $WORKSPACE/hudson/$REPO_BRANCH.xml .repo/local_manifests/$REPO_BRANCH.xml
 
 echo Core Manifest:
 cat .repo/manifest.xml
 
 echo Local Manifest:
-cat .repo/local_manifests/dyn-$REPO_BRANCH.xml
+cat .repo/local_manifests/$REPO_BRANCH.xml
 
 ## TEMPORARY: Some kernels are building _into_ the source tree and messing
 ## up posterior syncs due to changes
