@@ -33,4 +33,5 @@ then
 cp $OUT/recovery.img $WORKSPACE/archive
 fi
 
-chmod -R ugo+r $WORKSPACE/archive
+chmod -R ugo+r $WORKSPACE/*.zip
+chmod -R ugo+r $WORKSPACE/*.img
