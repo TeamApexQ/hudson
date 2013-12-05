@@ -290,6 +290,9 @@ fi
 #echo "UPDATING API"
 #make update-api
 #time mka bacon recoveryzip recoveryimage checkapi
+cd /var/lib/jenkins/jobs/apexq-staging-4.4/android/cm-11.0/vendor/cm
+./get-prebuilts
+cd /var/lib/jenkins/jobs/apexq-staging-4.4/android/cm-11.0/
 time brunch apexqtmo
 check_result "Build failed."
 
