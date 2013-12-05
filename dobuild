@@ -1,11 +1,16 @@
 #!/bin/bash
 
+#Cleanup
 rm -f $WORKSPACE/*.zip $WORKSPACE/*.img
-OUT=out/target/product/apexqtmo
 rm -f $OUT/cm*.zip*
+
+#Setup
+OUT=out/target/product/apexqtmo
 cd vendor/cm
 ./get-prebuilts
 cd ../..
+
+#CCACHE
 export PATH="$PATH:/opt/local/bin/:$PWD/prebuilts/misc/$(uname|awk '{print tolower($0)}')-x86/ccache"
 export USE_CCACHE=1
 export CCACHE_DIR=~/.kk_ccache
@@ -13,11 +18,14 @@ if [ ! "$(ccache -s|grep -E 'max cache size'|awk '{print $4}')" = "15.0" ]
 then
 ccache -M 15G
 fi
+
+#Build
 . ./build/envsetup.sh
 if [ $CLEAN = "true" ]; then make clean; fi
 brunch apexqtmo
 if [ "0" -ne "$?" ]; then exit 1; fi
 
+#Archive
 if [! -d $WORKSPACE/archive ]; then mkdir $WORKSPACE/archive; fi
 for f in $(ls $OUT/cm-*.zip*)
 do
@@ -33,5 +41,6 @@ then
 cp $OUT/recovery.img $WORKSPACE/archive
 fi
 
+#Verify permissions
 chmod -R ugo+r $WORKSPACE/*.zip
 chmod -R ugo+r $WORKSPACE/*.img
