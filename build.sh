@@ -172,48 +172,48 @@ if [ ! -z "$CHERRIES" ]; then
   echo "Cherry picking done."
 fi
 
-if [ -f $WORKSPACE/hudson/$REPO_BRANCH-setup.sh ]
-then
-  $WORKSPACE/hudson/$REPO_BRANCH-setup.sh
-else
-  $WORKSPACE/hudson/cm-setup.sh
-fi
+#if [ -f $WORKSPACE/hudson/$REPO_BRANCH-setup.sh ]
+#then
+#  $WORKSPACE/hudson/$REPO_BRANCH-setup.sh
+#else
+#  $WORKSPACE/hudson/cm-setup.sh
+#fi
 
-if [ -f .last_branch ]
-then
-  LAST_BRANCH=$(cat .last_branch)
-else
-  echo "Last build branch is unknown, assume clean build"
-  LAST_BRANCH=$REPO_BRANCH-$CORE_BRANCH$RELEASE_MANIFEST
-fi
+#if [ -f .last_branch ]
+#then
+#  LAST_BRANCH=$(cat .last_branch)
+#else
+#  echo "Last build branch is unknown, assume clean build"
+#  LAST_BRANCH=$REPO_BRANCH-$CORE_BRANCH$RELEASE_MANIFEST
+#fi
 
-if [ "$LAST_BRANCH" != "$REPO_BRANCH-$CORE_BRANCH$RELEASE_MANIFEST" ]
-then
-  echo "Branch has changed since the last build happened here. Forcing cleanup."
-  CLEAN="true"
-fi
+#if [ "$LAST_BRANCH" != "$REPO_BRANCH-$CORE_BRANCH$RELEASE_MANIFEST" ]
+#then
+#  echo "Branch has changed since the last build happened here. Forcing cleanup."
+#  CLEAN="true"
+#fi
 
 . build/envsetup.sh
-lunch $LUNCH
-check_result "lunch failed."
+#lunch $LUNCH
+#check_result "lunch failed."
 
 # save manifest used for build (saving revisions as current HEAD)
 
 # include only the auto-generated locals
-TEMPSTASH=$(mktemp -d)
-mv .repo/local_manifests/* $TEMPSTASH
-mv $TEMPSTASH/roomservice.xml .repo/local_manifests/
+#TEMPSTASH=$(mktemp -d)
+#mv .repo/local_manifests/* $TEMPSTASH
+#mv $TEMPSTASH/roomservice.xml .repo/local_manifests/
 
 ls -l .repo/local_manifests/
 
 # save it
-repo manifest -o $WORKSPACE/archive/manifest.xml -r
-ls -l $WORKSPACE/archive/
+#repo manifest -o $WORKSPACE/archive/manifest.xml -r
+#ls -l $WORKSPACE/archive/
 
 # restore all local manifests
-mv $TEMPSTASH/* .repo/local_manifests/ 2>/dev/null
-rmdir $TEMPSTASH
-ls -l .repo/local_manifests/
+#mv $TEMPSTASH/* .repo/local_manifests/ 2>/dev/null
+#rmdir $TEMPSTASH
+#ls -l .repo/local_manifests/
 
 rm -f $OUT/cm-*.zip*
 
@@ -286,10 +286,11 @@ else
   echo "Skipping clean: $TIME_SINCE_LAST_CLEAN hours since last clean."
 fi
 
-echo "$REPO_BRANCH-$CORE_BRANCH$RELEASE_MANIFEST" > .last_branch
-echo "UPDATING API"
-make update-api
-time mka bacon recoveryzip recoveryimage checkapi
+#echo "$REPO_BRANCH-$CORE_BRANCH$RELEASE_MANIFEST" > .last_branch
+#echo "UPDATING API"
+#make update-api
+#time mka bacon recoveryzip recoveryimage checkapi
+time brunch apexqtmo
 check_result "Build failed."
 
 for f in $(ls $OUT/cm-*.zip*)
