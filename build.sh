@@ -203,12 +203,16 @@ TEMPSTASH=$(mktemp -d)
 mv .repo/local_manifests/* $TEMPSTASH
 mv $TEMPSTASH/roomservice.xml .repo/local_manifests/
 
+ls -l .repo/local_manifests/
+
 # save it
 repo manifest -o $WORKSPACE/archive/manifest.xml -r
+ls -l $WORKSPACE/archive/
 
 # restore all local manifests
 mv $TEMPSTASH/* .repo/local_manifests/ 2>/dev/null
 rmdir $TEMPSTASH
+ls -l .repo/local_manifests/
 
 rm -f $OUT/cm-*.zip*
 
